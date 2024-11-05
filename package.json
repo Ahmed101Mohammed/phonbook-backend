@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ..\\fullstack-open-university\\part2\\phonebook\\ && npm run build && @powershell Copy-Item dist -Recurse ..\\..\\..\\phonbook-backend\\"
   },
   "author": "Ahmed Al-3adl",
   "license": "MIT",
