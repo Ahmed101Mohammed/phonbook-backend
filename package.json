@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ..\\fullstack-open-university\\part2\\phonebook\\ && npm run build && @powershell Copy-Item dist -Recurse ..\\..\\..\\phonbook-backend\\"
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ..\\fullstack-open-university\\part2\\phonebook\\ && npm run build && @powershell Copy-Item dist -Recurse ..\\..\\..\\phonbook-backend\\",
+    "lint": "eslint ."
   },
   "author": "Ahmed Al-3adl",
   "license": "MIT",
@@ -19,6 +20,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@stylistic/eslint-plugin-js": "^2.10.1",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
     "nodemon": "^3.1.7"
   }
 }
